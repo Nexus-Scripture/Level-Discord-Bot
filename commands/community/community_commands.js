@@ -133,7 +133,7 @@ module.exports = {
                 message.channel.send("There was an error retrieving your rank.");
             }
         }
-    },    
+    },
 
     // ? Slash
     slashRank: {
@@ -213,7 +213,7 @@ module.exports = {
                 }
             }
         }
-    },             
+    },
 
 // //
 
@@ -726,7 +726,7 @@ module.exports = {
                 }
     
                 // Call shared vote logic
-                await executeVote(userId, interaction.guild, allowedChannel, client, serverId, process.env.BOT_ID);
+                await executeVote(userId, interaction.guild, allowedChannel, client);
     
                 // Acknowledge the interaction
                 await interaction.reply({ content: "Vote processed!", ephemeral: true });

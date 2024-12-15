@@ -781,28 +781,31 @@ async function executeLeaderboard(guild, channel) {
     });
 }
 
-async function executeVote(userId, guild, channel, client, hardcodedBotId) {
+async function executeVote(userId, guild, channel, client) {
     const serverId = guild.id;
 
     // Ensure user data is initialized in the database
     await ensureUserData(serverId, userId);
 
     try {
-        const response = await axios.get(`https://top.gg/api/bots/${hardcodedBotId}/check?userId=${userId}`, {
+        // Make the API call to Top.gg
+        const response = await axios.get(`https://top.gg/api/bots/1278098225353719869/check?userId=${userId}`, {
             headers: { Authorization: process.env.TOPGG_API_KEY }
         });
 
-        const voted = response.data.voted;
+        // Check if the user has voted, Top.gg returns 1 if voted and 0 otherwise
+        const hasVoted = response.data.voted === 1;
 
+        // Create the embed message
         const voteEmbed = new EmbedBuilder()
             .setColor(0x3498db)
             .setTitle("Vote for Level Bot to Earn Rewards")
             .setDescription("Vote for the bot to help it grow and earn extra XP as a reward!")
             .addFields({
                 name: 'Vote on top.gg to earn 100 XP',
-                value: voted
+                value: hasVoted
                     ? '🔴 You have already voted. You can vote again in 12 hours.'
-                    : `🟢 You can vote now. [Vote here!](https://top.gg/bot/${hardcodedBotId}/vote)`,
+                    : `🟢 You can vote now. [Vote here!](https://top.gg/bot/1278098225353719869/vote)`,
                 inline: false
             })
             .setFooter({
@@ -810,17 +813,22 @@ async function executeVote(userId, guild, channel, client, hardcodedBotId) {
                 iconURL: client.user.displayAvatarURL()
             });
 
+        // Send the embed message to the channel
         await channel.send({ embeds: [voteEmbed] });
 
-        if (voted) {
+        // If user has already voted, return a specific message
+        if (hasVoted) {
             return channel.send("It looks like you have already voted. You can vote again in 12 hours.");
         } else {
-            // Update XP and lastVote in the database
+            // If user has not voted, reward them with XP and update the database
             await updateUserVoteData(serverId, userId, 100);  // Add 100 XP
             return channel.send(`Thank you for voting! You have earned 100 XP.`);
         }
     } catch (error) {
         console.error("Error in executeVote:", error);
+
+        // Send an error message to the channel
+        return channel.send("An error occurred while checking your vote status. Please try again later.");
     }
 }
 
