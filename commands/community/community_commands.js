@@ -270,20 +270,7 @@ module.exports = {
                     }
                 }
     
-                const member = guild.members.cache.get(user.id);
-                const roles = member.roles.cache
-                    .filter(role => role.name !== '@everyone')
-                    .map(role => role.id)
-                    .join(", ");
-
-                const embed = new EmbedBuilder()
-                    .setColor(0x3498db)
-                    .setTitle(`${user.username}'s Roles`)
-                    .setDescription(`<@&${roles}>` || "You don't have any special roles.")
-                    .setThumbnail(user.displayAvatarURL())
-                    .setFooter({ text: "Role Checker", iconURL: guild.client.user.displayAvatarURL() });
-
-                await interaction.reply({ embeds: [embed] });
+                await executeCheckRoles(interaction.user, interaction.guild, allowedChannel);
             } catch (error) {
                 console.error('Error in checkroles command (slash):', error);
                 interaction.reply("There was an error retrieving your roles.");

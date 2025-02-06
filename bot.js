@@ -11,7 +11,7 @@ const communityCommands = require('./commands/community/community_commands');
 const configurationCommands = require('./commands/configuration/configuration_commands.js');
 const ownerCommands = require('./commands/owner/owner_commands.js');
 
-const { 
+const {
         // User DB:
         getUserData,
         getUserDataFromDB,

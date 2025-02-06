@@ -853,13 +853,13 @@ async function executeCheckRoles(user, guild, channel) {
     const member = guild.members.cache.get(user.id);
     const roles = member.roles.cache
         .filter(role => role.name !== '@everyone')
-        .map(role => role.id)
+        .map(role => `<@&${role.id}>`)
         .join(", ");
 
     const embed = new EmbedBuilder()
         .setColor(0x3498db)
         .setTitle(`${user.username}'s Roles`)
-        .setDescription(`<@&${roles}>` || "You don't have any special roles.")
+        .setDescription(roles || "You don't have any special roles.")
         .setThumbnail(user.displayAvatarURL())
         .setFooter({ text: "Role Checker", iconURL: guild.client.user.displayAvatarURL() });
 
@@ -1001,7 +1001,7 @@ async function notifyUpdate(client) {
     }
 }
 
-module.exports = {    
+module.exports = {
     // User DB:
     getUserData,
     getUserDataFromDB,
