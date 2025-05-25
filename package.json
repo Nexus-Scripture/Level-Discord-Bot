@@ -8,5 +8,17 @@
     "express": "^5.1.0",
     "sqlite3": "^5.1.7",
     "topgg-autoposter": "^2.0.2"
-  }
+  },
+  "name": "Level Discord Bot",
+  "version": "0.5.2",
+  "description": "Discord bot that shows stats from vscode extension",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord-bot"
+  ],
+  "author": "Jay",
+  "license": "MIT"
 }

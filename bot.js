@@ -144,7 +144,7 @@ const commands = [
 ];
 
 client.once('ready', async () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`\n\n\nLogged in as ${client.user.tag}!\nBot Version: v0.5.2\n\n\n`);
 
     try {
         console.log('Started refreshing application (/) commands.');
