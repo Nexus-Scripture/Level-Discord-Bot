@@ -22,4 +22,4 @@ jobs:
             git fetch --all
             git reset --hard origin/prod
             npm ci
-            pm2 restart distrack-bot
+            pm2 restart "Level Bot"
