@@ -1,4 +1,4 @@
-const { PermissionsBitField, resolveBase64 } = require('discord.js');
+const { PermissionsBitField, MessageFlags } = require('discord.js');
 const { EmbedBuilder } = require('@discordjs/builders');
 const {     
         // User DB:
@@ -224,7 +224,7 @@ module.exports = {
     viewsettings: {
         execute: async (message) => {
             if (!message.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
-                return message.channel.send("You don't have permission to use this command.");
+                return message.channel.send({ content: "You don't have permission to use this command.", flags: MessageFlags.Ephemeral });
             }
     
             const serverId = message.guild.id;

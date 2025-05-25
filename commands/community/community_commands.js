@@ -1,4 +1,4 @@
-const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder } = require('discord.js');
+const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, MessageFlags } = require('discord.js');
 const DBL = require('dblapi.js');
 const axios = require('axios');
 require('dotenv').config();
@@ -725,4 +725,16 @@ module.exports = {
     },
 
 // //
+
+    // * Dashboard
+    dashboard: {
+        execute: async (interaction) => {
+            try {
+                await interaction.reply({ content: "The dashboard is currently being worked on. An update will be posted soon!", flags: MessageFlags.Ephemeral });
+            } catch (error) {
+                console.error('Error in dashboard command:', error);
+                interaction.reply("There was an error retrieving the dashboard.");
+            }
+        }
+    }
 }
