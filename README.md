@@ -3,14 +3,14 @@
 </div>
 <h1 align="center">Levelling Discord Bot</h1>
 <div align="center">
-    <a href="https://github.com/Nexus-Scripture/Level-Discord-Bot/graphs/contributors">
-      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/Nexus-Scripture/Level-Discord-Bot?color=2db94d" />
+    <a href="https://github.com/JayNightmare/Level-Discord-Bot/graphs/contributors">
+      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/JayNightmare/Level-Discord-Bot?color=2db94d" />
     </a>
-    <a href="https://github.com/Nexus-Scripture/Level-Discord-Bot/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/Nexus-Scripture/Level-Discord-Bot?color=0088ff" />
+    <a href="https://github.com/JayNightmare/Level-Discord-Bot/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/JayNightmare/Level-Discord-Bot?color=0088ff" />
     </a>
-    <a href="https://github.com/Nexus-Scripture/Level-Discord-Bot/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Nexus-Scripture/Level-Discord-Bot?color=0088ff" />
+    <a href="https://github.com/JayNightmare/Level-Discord-Bot/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/JayNightmare/Level-Discord-Bot?color=0088ff" />
     </a>
     <br/>
 </div>
