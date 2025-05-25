@@ -3,14 +3,14 @@
 </div>
 <h1 align="center">Levelling Discord Bot</h1>
 <div align="center">
-    <a href="https://github.com/JayNightmare/Level-Discord-Bot/graphs/contributors">
-      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/JayNightmare/Level-Discord-Bot?color=2db94d" />
+    <a href="https://github.com/Nexus-Scripture/Level-Discord-Bot/graphs/contributors">
+      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/Nexus-Scripture/Level-Discord-Bot?color=2db94d" />
     </a>
-    <a href="https://github.com/JayNightmare/Level-Discord-Bot/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/JayNightmare/Level-Discord-Bot?color=0088ff" />
+    <a href="https://github.com/Nexus-Scripture/Level-Discord-Bot/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/Nexus-Scripture/Level-Discord-Bot?color=0088ff" />
     </a>
-    <a href="https://github.com/JayNightmare/Level-Discord-Bot/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/JayNightmare/Level-Discord-Bot?color=0088ff" />
+    <a href="https://github.com/Nexus-Scripture/Level-Discord-Bot/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Nexus-Scripture/Level-Discord-Bot?color=0088ff" />
     </a>
     <br/>
 </div>
@@ -60,21 +60,7 @@ All the things you need to import are:
 
 ## Installation Guide For JSON:
 ### Step 1: Importing
-Install the `Absolutely Needed Imports`. Using `dotenv` will keep your bot token secure in a `.env` file. Remember to add this file to the .gitignore file so you don't share your token by accident.
-
-Your `.env` should look similar to this:
-```js
-# Needed Variables
-TOKEN= # bot token
-TEST_TOKEN= # test bot token if you want to test before pushing to live
-CLIENT_ID= # bot client id
-OWNER= # your user id
-
-# Optional if you publish the bot to Top.gg
-TOPGG_API_KEY= # your webhook key on topgg
-TOPGG_TOKEN= # secret token on topgg
-HARDCODED= # bot client id
-```
+Install the `Absolutely Needed Imports`. Using `dotenv` will keep your bot token secure in a `.env` file (I included an example of how the `.env` should look in `.env.example`). Remember to add `.env` file to the .gitignore file so you don't share your token by accident.
 
 > Optional:
 
@@ -154,21 +140,7 @@ After all that, run `bot.js`. If you recieve errors, idk use ChatGPT 👁👄�
 
 ## Installation Guide For SQLite3:
 ### Step 1: Importing
-Install the `Absolutely Needed Imports`. Using `dotenv` will keep your bot token secure in a `.env` file. Remember to add this file to the .gitignore file so you don't share your token by accident.
-
-Your `.env` should look similar to this:
-```js
-# Needed Variables
-TOKEN= # bot token
-TEST_TOKEN= # test bot token if you want to test before pushing to live
-CLIENT_ID= # bot client id
-OWNER= # your user id
-
-# Optional if you publish the bot to Top.gg
-TOPGG_API_KEY= # your webhook key on topgg
-TOPGG_TOKEN= # secret token on topgg
-HARDCODED= # bot client id
-```
+Install the `Absolutely Needed Imports`. Using `dotenv` will keep your bot token secure in a `.env` file (I included an example of how the `.env` should look in `.env.example`). Remember to add this file to the .gitignore file so you don't share your token by accident.
 
 > Optional:
 

@@ -29,23 +29,21 @@ db.serialize(() => {
 
         // Create the userBadges table
         db.run(`CREATE TABLE IF NOT EXISTS userBadges (
-                id  INTEGER
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 serverId TEXT,
                 userId TEXT,
-                badgeName TEXT DEFAULT "' '", 
-                badgeEmoji TEXT DEFAULT "' '", 
-                level INTEGER,
-                PRIMARY KEY (id AUTOINCREMENT)
+                badgeName TEXT DEFAULT "' '",
+                badgeEmoji TEXT DEFAULT "' '",
+                level INTEGER
         )`);
 
         // Create the serverBadges table
         db.run(`CREATE TABLE IF NOT EXISTS serverBadges (
-                id  INTEGER
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 serverId TEXT,
-                badgeName TEXT DEFAULT "' '", 
+                badgeName TEXT DEFAULT "' '",
                 badgeEmoji TEXT DEFAULT "' '",
-                level INTEGER,
-                PRIMARY KEY (id AUTOINCREMENT)
+                level INTEGER
         )`);
 
         // Create the server configurations table
