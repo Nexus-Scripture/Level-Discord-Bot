@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.LINODE_USER }}
           key: ${{ secrets.LINODE_SSH_KEY }}
           script: |
-            cd /code/Level-Discord-Bot
+            cd ~/code/Level-Discord-Bot
             git fetch --all
             git reset --hard origin/prod
             npm ci
